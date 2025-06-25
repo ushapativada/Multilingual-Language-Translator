@@ -9,7 +9,6 @@ import os
 from datetime import datetime
 
 app = Flask(__name__)
-
 # Language codes and names mapping                                                       
 LANGUAGES = {
     'auto': 'Auto-detect',

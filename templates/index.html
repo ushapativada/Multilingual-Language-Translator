@@ -403,7 +403,8 @@
                     // Show detected language info
                     if (sourceLang.value === 'auto') {
                         const langName = getLanguageName(result.detected_language);
-                        detectedLang.textContent = Detected language: ${langName} (${Math.round(result.confidence * 100)}% confidence);
+                        // Corrected: using backticks for template literal
+                        detectedLang.textContent = `Detected language: ${langName} (${Math.round(result.confidence * 100)}% confidence)`;
                     } else {
                         detectedLang.textContent = '';
                     }
@@ -422,7 +423,8 @@
         
         function showStatus(message, type) {
             status.textContent = message;
-            status.className = status ${type};
+            // Corrected: using backticks for template literal
+            status.className = `status ${type}`; 
             status.style.display = 'block';
             
             if (type === 'success') {
